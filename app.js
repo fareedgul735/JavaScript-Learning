@@ -3293,3 +3293,212 @@
 // chapter 58 The DOM //
 
 // console.log(document.body);
+
+// function checking() {
+//   //   let e = document.getElementsByTagName("input");
+//   //   console.log(e[0]);
+//   //   let divs = document.getElementById("parent");
+//   //   let get = divs.getElementsByTagName("p");
+//   //   console.log(get[3].innerHTML);
+//   //   let para = document.getElementsByTagName("p");
+//   //   console.log((para[2].innerHTML = "Hello,World"));
+//   //   let paragraph = document.getElementsByTagName("p");
+//   //   console.log((paragraph[7].innerHTML = "AjabGul"));
+//   //   let div = document.getElementById("parent");
+//   //   let paragraph = div.getElementsByTagName("p");
+//   //   console.log(paragraph[7].innerHTML);
+//   //   let doc = document.childNodes;
+//   //   console.log(doc);
+//   //   let cNode = document.getElementById("2ndParent");
+//   //   let y = cNode.childNodes;
+//   //   console.log(y);
+//   //   let cNode = document.getElementById("2ndParent");
+//   //   let y = cNode.childNodes[2].innerHTML;
+//   //   console.log(y);
+//   //   let n = document.getElementById("parent");
+//   //   let d = n.childNodes[1];
+//   //   console.log(d);
+//   //   console.log(d.nodeType);
+
+//   // let div = document.getElementById("humpty");
+//   // let pCounter = 0;
+//   // for (let i = 0; i < div.childNodes.length; i++) {
+//   //   if (div.childNodes[i].nodeType === 1) {
+//   //     pCounter++;
+//   //   }
+//   //   if (pCounter === 3) {
+//   //     div.childNodes[i].innerHTML = "all over thankyou !";
+//   //     break;
+//   //   }
+//   // }
+// }
+// checking();
+
+// chapter 62The DOM:
+// More ways to target elements///
+
+// let f = document.getElementById("parent").firstElementChild;
+// let f = document.getElementById('parent').lastElementChild
+// console.log(f);
+
+// let kiding = document.getElementById("parent");
+// let checking = kiding.parentNode;
+// console.log(checking);
+
+// let firstEl = document.getElementById("parent");
+// // let secondEl = firstEl.nextSibling;
+// let secondEl = firstEl.lastElementChild;
+// console.log(secondEl);
+
+// chapter 63 The DOM:
+// Getting a target's name//
+
+// let tell = document.getElementById("list");
+// let enjoying = tell.nodeName;
+// console.log(enjoying);
+
+// let tell = document.getElementById("list");
+// let target = tell.nodeValue;
+// console.log(target);
+
+// let tEl = document.getElementsByTagName("li");
+// let leng = tEl.length;
+// console.log(leng,"--li-length");
+
+// let liElement = document.getElementsByTagName("li");
+// let targeting = liElement.length;
+// // console.log(targeting);
+
+// for (let i = 0; i < targeting; i++) {
+//   if (liElement[i].innerHTML === "") {
+//     liElement[i].innerHTML = "Hello,world !";
+//     liElement[i].style.fontStyle = "italic";
+//     liElement[i].style.color = "blue";
+//   }
+// }
+
+// let liParent = document.getElementById("list");
+// let checkChildNode = liParent.parentNode;
+// console.log(checkChildNode);
+
+// let varinty = document.getElementById('parent');
+// let lengthing = varinty.childNodes;
+// console.log(lengthing);
+
+// chapter 65 The DOM:
+// Attributes
+
+// let paragraph = document.getElementById("para");
+// let addClass = paragraph.hasAttribute("style");
+// console.log(addClass);
+
+// let paragraph = document.getElementById("para");
+// let addClass = paragraph.getAttribute("style");
+// console.log(addClass);
+
+// let unOList = document.getElementById("unOrderlist");
+// let addClass = unOList.setAttribute(
+// "class","para"
+// );
+// console.log(addClass);
+
+// chapter 66 The DOM:
+// Attribute names and values//
+
+// let checks = document.getElementById("divs");
+// let loing = checks.childNodes[1]
+// console.log(loing);
+
+// let checks = document.getElementById("divs");
+// let loing = checks.parentNode
+// console.log(loing);
+
+// let checks = document.getElementById("divs");
+// let loing = checks.firstElementChild
+// console.log(loing);
+
+// let paragraph = document.getElementById("para");
+// let checkLength = paragraph.attributes;
+// console.log(checkLength);
+
+// chapter 67 68 The DOM:
+// Adding nodes///
+
+// let addTag = document.getElementById("divs");
+// let create = (document.createElement("p"));
+// let t = document.createTextNode("hello fareed");
+// console.log(t);
+
+// let divAdd = document.getElementById("parent");
+
+// let createPara = document.createElement("div");
+// createPara.style.backgroundColor = "yellow";
+// let createText = document.createTextNode("I am a div !");
+
+// createPara.appendChild(createText);
+// divAdd.appendChild(createPara);
+
+// let parentDiv = document.getElementById("parent");
+// parentDiv.style.backgroundColor = "black";
+// let parentChildDiv = document.getElementById("parentChild");
+// parentChildDiv.style.backgroundColor = "pink";
+// // parentDiv//
+// let pdCreateEl = document.createElement("i");
+// pdCreateEl.style.backgroundColor = "yellow";
+// let pdCreateText = document.createTextNode("iam a italic !");
+// // parentDiv//
+
+// // parentChildDiv
+// let pdcCreateEl = document.createElement("b");
+// pdcCreateEl.style.backgroundColor = "green";
+// pdcCreateEl.style.color = "black";
+// let pdcCreateText = document.createTextNode("iam a bolder !");
+// // parentChildDiv
+
+// //parent appending /
+
+// parentDiv.appendChild(pdCreateEl);
+// pdCreateEl.appendChild(pdCreateText);
+// //parent appending /
+
+// // parentChildDiv appending //
+
+// parentChildDiv.appendChild(pdcCreateEl);
+// pdcCreateEl.appendChild(pdcCreateText);
+
+// let a = document.getElementById("parent");
+// let before = document.createElement("p");
+// before.textContent = "iam a before p !";
+// let after = document.createElement("p");
+// after.textContent = "iam a after p !";
+// a.insertAdjacentElement("beforebegin", before);
+// a.insertAdjacentElement("afterend", after);
+
+// let parent = document.getElementById("parent"); // Get the parent element
+// let child = document.getElementById("child");
+
+// parent.removeChild(child);
+
+// matches/
+// let div = document.getElementById("parent");
+// let z = div.matches(".classes");
+// console.log(z);
+
+// let div = document.getElementById("parent");
+// let z = div.matches(".class");
+// console.log(z);
+
+// closest /
+// let div = document.getElementById("parent");
+// let z = div.closest(".classe");
+// console.log(z);
+
+// let div = document.getElementById("parent");
+// let z = div.closest(".class");
+// console.log(z);
+
+// contains //
+// let d = document
+//   .querySelector("body")
+//   .contains(document.querySelector("#parent"));
+// console.log(d);

@@ -102,7 +102,7 @@ font-style: italic;
   display: none;
 } */
 
-.para{
+ .para{
   font-family: monospace;
   font-size: 22px;
   font-style: italic;
@@ -110,9 +110,13 @@ font-style: italic;
   color: rgb(255, 0, 217);
   cursor: pointer;
 }
-.paring {
+
+
+
+
+/* .paring {
   color: black;
-} 
+}   */
 
 /* .jumbo {
   outline: none;

@@ -3479,6 +3479,17 @@
 
 // parent.removeChild(child);
 
+// let f = 6;
+// function factorialNum(number) {
+//   let array = Array.from(Array(number + 1).keys());
+//   console.log(array.slice(1));
+//   // let c = array.slice(1).reduce((a, b) => {
+//   //   return a * b;
+//   // });
+//   // console.log(c);
+// }
+// factorialNum(f);
+
 // matches/
 // let div = document.getElementById("parent");
 // let z = div.matches(".classes");
@@ -3502,3 +3513,72 @@
 //   .querySelector("body")
 //   .contains(document.querySelector("#parent"));
 // console.log(d);
+
+// function factorialNum(number) {
+//   let fac = number;
+//   let dummyArray = [];
+//   let sum = 1;
+//   for (let i = 1; i <= number; i++) {
+//     dummyArray.push(fac);
+//     fac = fac - 1;
+//   }
+//   dummyArray?.map((item) => {
+//     sum = sum * item;
+//   });
+//   console.log(dummyArray, sum);
+//   return sum;
+// }
+// let input = prompt("Enter your factorial number !");
+// input = Number(input);
+// factorialNum(input);
+
+// function factorialNum(num) {
+//   let factorial = num;
+//   let dummyArray = [];
+//   let facResult = 1;
+//   for (let i = 0; i < num; i++) {
+//     dummyArray.push(factorial);
+//     factorial = factorial - 1;
+//   }
+//   dummyArray.map((item) => {
+//     facResult = facResult * item;
+//     return facResult;
+//   });
+//   console.log(dummyArray, "---dummyArray");
+//   console.log("factorialValue = ", facResult);
+// }
+// factorialNum(+prompt("Enter Factorial Numbers !"));
+
+let arr = [
+  "Pepsi",
+  "Marinda",
+  "Fanta",
+  "Dew",
+  "CocaKloa",
+  "String",
+  "Redbull",
+  "Shilajit",
+];
+
+function mysplice(arr, start, deleted, ...body) {
+  console.log(arr, start, deleted, body);
+  let newArr = [];
+  let first = [];
+  let end = [];
+  let num = deleted;
+  if (start >= 0 && start < arr?.length) {
+    if (num >= 0) {
+      for (let i = 0; i < start; i++) {
+        newArr.push(arr[i]);
+      }
+      let end = arr.slice(start + num);
+      console.log(end);
+      newArr.push(...first, ...body, ...end);
+      return newArr;
+    } else {
+      alert("Please must be greater than -1");
+    }
+  }
+}
+
+console.log(mysplice(arr, 2, 4, "7np", "Sprite"), "mysplice");

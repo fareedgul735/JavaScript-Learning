@@ -3549,36 +3549,228 @@
 // }
 // factorialNum(+prompt("Enter Factorial Numbers !"));
 
-let arr = [
-  "Pepsi",
-  "Marinda",
-  "Fanta",
-  "Dew",
-  "CocaKloa",
-  "String",
-  "Redbull",
-  "Shilajit",
-];
+// let arr = [
+//   "Pepsi",
+//   "Marinda",
+//   "Fanta",
+//   "Dew",
+//   "CocaKloa",
+//   "String",
+//   "Redbull",
+//   "Shilajit",
+// ];
 
-function mysplice(arr, start, deleted, ...body) {
-  console.log(arr, start, deleted, body);
-  let newArr = [];
-  let first = [];
-  let end = [];
-  let num = deleted;
-  if (start >= 0 && start < arr?.length) {
-    if (num >= 0) {
-      for (let i = 0; i < start; i++) {
-        newArr.push(arr[i]);
-      }
-      let end = arr.slice(start + num);
-      console.log(end);
-      newArr.push(...first, ...body, ...end);
-      return newArr;
-    } else {
-      alert("Please must be greater than -1");
-    }
-  }
-}
+// function mysplice(arr, start, deleted, ...body) {
+//   console.log(arr, start, deleted, body);
+//   let newArr = [];
+//   let first = [];
+//   let end = [];
+//   let num = deleted;
+//   if (start >= 0 && start < arr?.length) {
+//     if (num >= 0) {
+//       for (let i = 0; i < start; i++) {
+//         newArr.push(arr[i]);
+//       }
+//       let end = arr.slice(start + num);
+//       console.log(end);
+//       newArr.push(...first, ...body, ...end);
+//       return newArr;
+//     } else {
+//       alert("Please must be greater than -1");
+//     }
+//   }
+// }
 
-console.log(mysplice(arr, 2, 4, "7np", "Sprite"), "mysplice");
+// console.log(mysplice(arr, 2, 4, "7np", "Sprite"), "mysplice");
+
+// let mathNum = +prompt("Enter Your Mathematics Numbers!");
+// let csNum = +prompt("Enter Your Cs Numbers!");
+// let phy = +prompt("Enter Your Physics Numbers!");
+
+// let averagePer = (mathNum + csNum + phy) / 3;
+
+// if (mathNum > 60 && csNum > 60 && phy < 100) {
+//   alert(
+//     "you are eligible of course ! your percentage is: " + averagePer.toFixed(2)
+//   );
+// } else {
+//   alert(
+//     "you are not  eligible of course ! your percentage is: " +
+//       averagePer.toFixed(2)
+//   );
+// }
+
+// let userTableCheck = +prompt("Enter Your Favourite Table!");
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(userTableCheck + " X " + i + " = " + userTableCheck * i);
+// }
+
+// let mathNum = +prompt("Enter Your Mathematics Marks!");
+// let csNum = +prompt("Enter Your cs Marks!");
+
+// let percentage = (mathNum + csNum) / 2;
+
+// if (mathNum >= 55 && csNum <= 100) {
+//   alert("you are eligible of course ! your percentage is: " + percentage);
+// } else {
+//   alert("you are not  eligible of course ! your percentage is: " + percentage);
+// }
+
+// let userBdDate = new Date();
+// // let userBornDay = prompt("Enter Your Born Day!");
+// // let userBornMonth = prompt("Enter Your Born Month!");
+// // let userBornFullYear = prompt("Enter Your Born Year!");
+// userBdDate.setDate(prompt("Enter Your Born Day!"));
+// userBdDate.setMonth(prompt("Enter Your Born Month!"));
+// userBdDate.setFullYear(prompt("Enter Your Born Year!"));
+
+// alert(userBdDate);
+
+// let arrayOfColours = [
+//   "red",
+//   "yellow",
+//   "blue",
+//   "orange",
+//   "sky",
+//   "pink",
+//   "white",
+//   "black",
+// ];
+
+// let randomColourChange = parseInt(Math.random() * arrayOfColours.length);
+// let resultOfColour = arrayOfColours[randomColourChange];
+// console.log(resultOfColour);
+
+// let array = [
+//   "red",
+//   "yellow",
+//   "blue",
+//   "orange",
+//   "sky",
+//   "pink",
+//   "white",
+//   "black",
+// ];
+
+// function mySplice(array, startIndex, deleteIndex, ...multipleAddEl) {
+//   console.log(array + startIndex + deleteIndex + multipleAddEl);
+//   let newArray = [];
+//   let start = [];
+//   let end = [];
+//   let deletedNum = Number(deleteIndex);
+//   let startNum = Number(startIndex);
+//   if (isNaN(deletedNum)) {
+//     alert("Please Enter Number!");
+//   }
+//   if (isNaN(startNum)) {
+//     alert("Please Enter Number!");
+//   } else {
+//     if (startIndex >= 0 && startIndex < array.length) {
+//       if (deletedNum >= 0) {
+//         for (let i = 0; i < startIndex.length; i++) {
+//           newArray.push(array[i]);
+//         }
+//         let end = array.slice(startIndex + deletedNum);
+//         newArray.push(...start, ...multipleAddEl, ...end);
+//         return newArray;
+//       } else {
+//         alert("Please must be greater than -1");
+//       }
+//     }
+//   }
+// }
+
+// let array = [
+//   "Pepsi",
+//   "Marinda",
+//   "Fanta",
+//   "Dew",
+//   "CocaKloa",
+//   "String",
+//   "Redbull",
+//   "Shilajit",
+// ];
+
+// function mysplice(array, starting, deleting, ...content) {
+//   let newArray = [];
+//   let number = Number(deleting);
+//   let fStart = Number(starting);
+
+//   if (isNaN(fStart) || isNaN(number)) {
+//     alert("Please Enter Only Number !");
+//     return;
+//   }
+
+//   if (starting < 0 || starting >= array.length) {
+//     alert("Invalid starting index!");
+//     return;
+//   }
+
+//   if (number < 0) {
+//     alert("Delete count must be non-negative!");
+//     return;
+//   }
+
+//   // Copy elements before the `starting` index
+//   for (let i = 0; i < starting; i++) {
+//     newArray.push(array[i]);
+//   }
+
+//   // Insert new elements
+//   newArray.push(...content);
+
+//   // Copy elements after the deleted ones
+//   for (let i = starting + number; i < array.length; i++) {
+//     newArray.push(array[i]);
+//   }
+
+//   return newArray;
+// }
+
+// console.log(mysplice(array, +prompt(), +prompt(), prompt()));
+
+
+
+
+// let array = [
+//   "Pepsi",
+//   "Marinda",
+//   "Fanta",
+//   "Dew",
+//   "CocaKloa",
+//   "String",
+//   "Redbull",
+//   "Shilajit",
+// ];
+
+// function mysplice(array, starting, deleting, ...content) {
+//   console.log(array, starting, deleting, content);
+//   let newArray = [];
+//   let first = [];
+//   let end = [];
+//   let number = Number(deleting);
+//   let fStart = Number(starting);
+//   if (isNaN(fStart)) {
+//     alert("Please Enter Only Number !");
+//   }
+//   if (isNaN(number)) {
+//     alert("Please Enter Only Number !");
+//   } else {
+//     if (starting >= 0 && starting < array?.length) {
+//       if (number >= 0) {
+//         for (let i = 0; i < starting; i++) {
+//           newArray.push(array[i]);
+//         }
+//         let end = array.slice(starting + number);
+//         // console.log(end);
+//         newArray.push(...first, ...content, ...end);
+//         return newArray;
+//       } else {
+//         alert("Please must be greater than -1");
+//       }
+//     }
+//   }
+// }
+
+// console.log(mysplice(array, 1, 0, "lightRed"));

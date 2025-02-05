@@ -3730,9 +3730,6 @@
 
 // console.log(mysplice(array, +prompt(), +prompt(), prompt()));
 
-
-
-
 // let array = [
 //   "Pepsi",
 //   "Marinda",
@@ -3774,3 +3771,123 @@
 // }
 
 // console.log(mysplice(array, 1, 0, "lightRed"));
+
+// Ask user percentage of Matriculation
+// Ask user percentage of entry test
+// Calculate percentage and if user avg percentage is less than 70, alert him, user is not eligible otherwise user is eligible
+
+// let userMatricPer = +prompt("Enter Your Maticulation Percentage!");
+// let userEntryTest = +prompt("Enter Your Test Percentage!");
+
+// let resultOfUser = (userMatricPer + userEntryTest) / 2;
+
+// if (userMatricPer > 65 && userEntryTest <= 100) {
+//   alert("yes you are eligible of course! your percentage is: " + resultOfUser);
+// } else {
+//   alert(
+//     "no you are not eligible of course! your percentage is: " + resultOfUser
+//   );
+// }
+
+// Ask user any number.
+// Print the table of that number.
+// using `for loop` is mandatory
+
+// let userCheck = +prompt("Enter Your Favourite Table!");
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(userCheck + " X " + i + " = " + userCheck * i);
+// }
+
+// Every time user reload the page, user should see the different hexacode of random color.
+
+// let arrayOfColours = [
+//   "yellow",
+//   "red",
+//   "pink",
+//   "black",
+//   "white",
+//   "orange",
+//   "blue",
+//   "skyColor",
+// ];
+
+// let randomColourChange = parseInt(Math.random() * arrayOfColours.length);
+// let resultOfUser = arrayOfColours[randomColourChange];
+// console.log(resultOfUser);
+
+// Date
+// Month
+// Year
+// and alert the day on that date of year to user
+
+// let userBdDate = new Date();
+// // let userDate = prompt("Enter Your Born Date!");
+// // let userMonth = prompt("Enter Your Born Month!");
+// // let userYear = prompt("Enter Your Born Year!");
+
+// userBdDate.setDate( prompt("Enter Your Born Date!"));
+// userBdDate.setMonth(prompt("Enter Your Born Month!"));
+// userBdDate.setFullYear(prompt("Enter Your Born Year!"));
+
+// console.log(userBdDate);
+
+// Replicate of splice function//
+
+// let arrayOfMySplice = [
+//   "Red",
+//   "Yellow",
+//   "Green",
+//   "Orange",
+//   "Pink",
+//   "White",
+//   "Black",
+//   "Gray",
+//   "Purple",
+// ];
+
+// function mySplice(arrayOfMySplice, startIndex, deleteCount, ...multipleAdd) {
+//   console.log(arrayOfMySplice , startIndex , deleteCount , multipleAdd);
+//   let newArray = [];
+//   let startArray = [];
+//   let endArray = [];
+//   let startNum = Number(startIndex);
+//   let deleteNum = Number(deleteCount);
+//   if (isNaN(startNum) && isNaN(deleteNum)) {
+//     alert("Please Enter Number!");
+//   } else {
+//     if (startIndex >= 0 && startIndex < arrayOfMySplice.length) {
+//       if (deleteNum >= 0) {
+//         for (let i = 0; i < startIndex; i++) {
+//           newArray.push[arrayOfMySplice[i]];
+//         }
+//         let endArray = arrayOfMySplice.slice(startIndex + deleteNum);
+//         newArray.push(...startArray, ...multipleAdd, ...endArray);
+//         return newArray;
+//       }else {
+//           alert("please greater than -1");
+//       }
+//     }
+//   }
+// }
+
+// console.log(
+//   mySplice(
+//     arrayOfMySplice,
+//     +prompt("Enter Your StartIndex!"),
+//     +prompt("Enter Your DeletedCount!"),
+//     prompt("Enter Your Multiple Adding Values!")
+//   )
+// );
+
+// function changeStyle() {
+//   let myForm = document.getElementsByClassName("forming");
+
+//   for (let i = 0; i < myForm.length; i++) {
+//     if (myForm[i].value === "") {
+//       myForm[i].style.border = "2px solid red";
+//     } else {
+//       myForm[i].style.border = "2px solid blue ";
+//     }
+//   }
+// }

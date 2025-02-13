@@ -3891,3 +3891,489 @@
 //     }
 //   }
 // }
+
+// let myFunc = () => {
+//   let maths = Number(document.getElementById("input-1").value);
+//   let physics = Number(document.getElementById("input-2").value);
+//   let english = Number(document.getElementById("input-3").value);
+//   let comSci = Number(document.getElementById("input-4").value);
+//   let totalMarks = maths + physics + english + comSci;
+//   let percentage = (totalMarks / 400) * 100;
+//   alert("your percentage is: " + percentage);
+// };
+
+// Prayers Times ///
+// function prayersTimes() {
+//   let time = new Date().getHours();
+//   let heading = document.getElementById("head");
+//   let parentDiv = document.getElementById("parent");
+//   let childDiv = document.getElementById("child");
+//   let times = document.getElementById("para");
+//   times.innerHTML = new Date().toLocaleTimeString();
+
+//   if (time >= 4 && time <= 6) {
+//     heading.innerHTML = "فجر";
+//     parentDiv.style.backgroundColor = "yellow";
+//     childDiv.style.backgroundColor = "red";
+//   } else if (time >= 12 && time <= 15) {
+//     heading.innerHTML = "ظہر";
+//     parentDiv.style.backgroundColor = "brown";
+//     childDiv.style.backgroundColor = "orange";
+//   } else if (time >= 16 && time <= 17) {
+//     heading.innerHTML = "aser";
+//     parentDiv.style.backgroundColor = "red";
+//     childDiv.style.backgroundColor = "yellow";
+//   } else if (time >= 18 && time <= 19) {
+//     heading.innerHTML = "magrib";
+//     parentDiv.style.backgroundColor = "black";
+//     childDiv.style.backgroundColor = "white";
+//   } else {
+//     heading.innerHTML = "esha";
+//     parentDiv.style.backgroundColor = "pink";
+//     childDiv.style.backgroundColor = "blue";
+//   }
+// }
+
+// setInterval(prayersTimes, 1000);
+
+// function para() {
+//   let myPara = document.getElementById("para");
+//   let dummyText =
+//     "kwejhfwefhiowehoifhiwehfhweuifhweuifiwehfweuifhweihfweuifweuifuiwehfuihweuifhweefhwuifhweifwehuifwehfvdjhfvwehfwefvwehvevwehvwejhbjhevcwejhcvvwjhvhcwecvwjhvcejhcvwejhcvjhecvcwejhvchwejhcvwejhvcjhvwejhvch";
+//   myPara.innerHTML = dummyText;
+//   myPara.style.color = "black";
+//   myPara.style.fontStyle = "normal";
+// }
+
+// let parentDiv = document.getElementById("paraParent");
+// let childing = parentDiv.firstElementChild;
+// console.log(childing);
+
+//  objects //
+// let obj = {
+//   name: "abdullah",
+//   surname: "motiwala",
+// };
+
+// console.log(obj.surname);
+
+// objects ///
+
+// let obj = {
+//   name: "fareed",
+//   lname: "gul",
+//   experience: "web developer",
+// };
+
+// console.log(obj.experience);
+
+// javascript objects & objects classes //
+
+// const students = {
+//   fname: "fareed-gul",
+//   marks: 89.0,
+//   printMarks: function () {
+//     console.log("marks =", this.marks);/// this matlab mai apnay object ki baat kar raha ho
+//   },
+// };
+
+// const employe = {
+//   calculateTaxt() {
+//     console.log("your text is 10%");
+//   },
+//   //   calculating : function(){
+//   //     console.log("your text is 20%");
+//   //   }
+// };
+
+// const myBro = {
+//   salary: 10000,
+// };
+
+// myBro.__proto__ = employe;
+
+// let data = "scret informaion";
+
+// class user {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   viewData (){
+//     console.log("data = ",data);
+//   }
+// }
+
+// let student_1 = new user("fareed","fareedkhan@gamil.com");
+// let student_2 = new user("saeed","saeedgul@345gmail.com");
+
+// let a = 5;
+// let b = 10;
+// console.log(a + b);
+// try {
+//   console.log(a + c);
+// } catch (err) {
+//   console.log(err);
+// }
+// let f = 55;
+// let z = 76;
+// let y = 78;
+// console.log(f);
+// console.log(z);
+// console.log(y);
+
+// let shaks = {
+//   naam: "fareed",
+//   salamDena: function () {
+//     return "Salam mera naam " + this.naam + " hai";
+//   },
+// };
+
+// console.log(shaks.salamDena());
+
+// let myObj = {
+//   name: "fareed",
+//   experience: "web development",
+//   education: "Enter",
+// };
+// console.log(Object.keys(myObj));
+// console.log(Object.values(myObj));
+// console.log(Object.entries(myObj));
+
+// function cars(brand, year, model) {
+//   this.brand = brand;
+//   this.year = year;
+//   this.model = model;
+// }
+
+// let myCars = new cars("toyota", "2025", "Es6");
+// console.log(myCars);
+
+// 🔹 Gari ek constructor function hai.
+// 🔹 this.brand, this.model, this.saal naye object ki properties hain.
+// 🔹 new Gari("Toyota", "Corolla", 2022") ek naya object bana raha hai.
+
+// ES6 mein class constructor bhi use hota hai jo zyada modern tareeqa hai.
+
+// class myCars {
+//   constructor(carName, carPrice, carColour) {
+//     this.carName = carName;
+//     this.carPrice = carPrice;
+//     this.carColour = carColour;
+//   }
+// }
+// let myCarShop = new myCars("Civic", "90 Lakh", "Black");
+// console.log(myCarShop);
+
+// 🔹 constructor ek special method hai jo object initialize karta hai.
+// 🔹 new Gari("Honda", "Civic", 2023") ek naya object bana raha hai.
+
+// Agar hum ek constructor function bana rahe hain, toh methods ko prototype ka use karke define karna behtar hota hai.
+
+// function myCar(model, year, color) {
+//   this.model = model;
+//   this.year = year;
+//   this.color = color;
+// }
+
+// myCar.prototype.details = function () {
+//   return `yeh car ${this.model} ki ${this.year} or ${this.color} color ki hai  `;
+// };
+// let nayiCar = new myCar("Toyota", "2025", "Balck");
+// console.log(nayiCar.details());
+
+// ✅ Prototype use karne ka faida yeh hai ke har naye object ke liye method memory mein dobara store nahi hoti.
+
+// let person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30,
+//   isMarried: false,
+//   hobbies: ["reading", "traveling", "swimming"],
+//   address: {
+//     city: "New York",
+//     country: "USA",
+//   },
+//   greet: function () {
+//     setTimeout(() => {
+//       console.log(this, "this----");
+//       "Hello, my name is " + this.firstName + " " + this.lastName;
+//     }, 0);
+//   },
+//   greet2: function () {
+//     return "Hello, my name is " + this.firstName + " " + this.lastName;
+//   },
+// };
+
+// console.log(person.firstName); // Output: John
+// console.log(person["lastName"]); // Output: Doe
+// console.log(person.address.city); // Output: New York
+// console.log(person.greet()); // Output: Hello, my name is John Doe
+// console.log(person.greet2()); // Output: Hello, my name is John Doe
+
+// let obj = {
+//   fName: "fareed",
+//   lName: "gul",
+//   age: 19,
+//   education: "1st year",
+//   experience: "frontend developer",
+// };
+
+// // let myKeys = Object.keys(obj);
+// // let myValue = Object.values(obj);
+// // let myBothValues = Object.entries(obj);
+// // let myAssigning = Object.assign(obj);
+// // myAssigning.education = "matriculation";
+// // let freezing = Object.freeze(obj);
+// // freezing.fName = "saeed";
+// // freezing.city = "karachi";
+// // delete freezing.age;
+// // // obj.education = "Entermidiate";
+// // // console.log(myKeys);
+// // // console.log(myValue);
+// // // console.log(myBothValues);
+// // // console.log(myAssigning);
+// // console.log(freezing);
+
+// console.log(Object.hasOwn(obj, "fName"));
+// console.log(obj.hasOwnProperty("fjhsqkh"));
+
+// let sealing = Object.seal(obj);
+// sealing.hobbies = "boxing"; // add nhi karsakte //
+// delete sealing.age; // nahi delte karsakte hai //
+// sealing.fName = "saeed";
+// console.log(sealing);
+
+// function myFunc(name, param2, ...restParams) {
+//   console.log(name, param2, restParams);
+// }
+
+// myFunc("saeed", 1, 2, 3, 4, 5, 6, 7);
+
+// let a = { name: "Saeed", age: 29 };
+// let b = { city: "Karachi" };
+
+// let c = { ...a, ...b };
+// Object.seal(c);
+// c.data = "de";
+// c.age = 300;
+
+// console.log(c, "c");
+
+// function myCars(brandName, year) {
+//   this.brandName = brandName;
+//   this.year = year;
+// }
+
+// myCars.prototype.multipleCars = function () {
+//   console.log(`this is a ${this.brandName}`);
+// };
+
+// let car1 = new myCars("Corolla Brand", 2025);
+// let car2 = new myCars("Cultus Brand", 2023);
+
+// car1.multipleCars();
+// car2.multipleCars();
+
+// let Crickter = {
+//   player1: "BabarAzam",
+//   player2: "FakharZaman",
+//   player3: "SaimAyub",
+//   player4: "Rizwan",
+//   myBowler: ["NaseemShah", "ShaheenAfridi", "HarisRauf"],
+//   myFavrtBatsman: function () {
+//     return "My Favrt Batsman & Pakistan Best Batsman is " + this.player3;
+//   },
+//   myObj: {
+//     batsMan: "ShahidAfridi",
+//     bowler: "NaseemShah",
+//   },
+// };
+
+// console.log(Crickter);
+// console.log(Crickter.myBowler[1]);
+// console.log(Crickter.myFavrtBatsman());
+// console.log(Crickter.myObj["bowler"]);
+
+// let person = new Object();
+
+// person.fName = "fareed";
+// person.lName = "gul";
+
+// console.log(person);
+// console.log(person["lName"]);
+
+// let myArray = [
+//   { fname: "fareed", age: 19 },
+//   { fname: "saeed", age: 32 },
+//   { fname: "waleed", age: 15 },
+// ];
+
+// console.log(myArray);
+
+// for (i = 0; i < myArray.length; i++) {
+//   document.write(myArray[i].fname + " " + myArray[i].age + "<br>");
+// }
+// // document.write(myArray[0] + " " + myArray[0]);
+
+// const obj = {
+//   myFunc() {
+//     console.log("this is my function");
+//   },
+// };
+
+// let myObj = {
+//   mySecondFunc: function () {
+//     console.log("this is my function");
+//   },
+// };
+
+// myObj.__proto__ = obj;///myObj ka refrence hai
+
+// class myCars {
+//   start() {
+//     console.log("start");
+//   }
+
+//   stop() {
+//     console.log("stop");
+//   }
+//   myBrand(brand) {
+//     this.brand = brand;
+//   }
+// }
+
+// let corolla = new myCars();
+// corolla.myBrand("Civic Honda");
+// let cultus = new myCars();
+// cultus.myBrand("lexusBrand");/// classes jho hai aik object ko tempelte bana kay dete hai ya pr blue print dete haiF
+
+// class myCars {
+//   constructor(brand, year) {
+//     console.log("hello I`am Constructor");
+//     this.brand = brand;
+//     this.year = year;
+//   }
+//   start() {
+//     console.log("start");
+//   }
+
+//   stop() {
+//     console.log("stop");
+//   }
+// }
+
+// let corolla = new myCars("corolla", 2025); //constructor
+// console.log(corolla);
+// let cultus = new myCars("cultus", 2023); //constructor
+// console.log(cultus);
+
+// class parentClass {
+//   hello() {
+//     console.log("hello my function");
+//   }
+// }
+
+// class childClass extends parentClass {}
+
+// let object = new childClass();// extends means inherit karliya
+
+// class person {
+//   constructor() {
+//     this.specialities = " i am a special method";
+//   }
+//   eat() {
+//     console.log("I`am Eating");
+//   }
+//   sleep() {
+//     console.log("I`am Sleeping");
+//   }
+// }
+
+// class engineer extends person {
+//   work() {
+//     console.log("I`am Software Engineer");
+//   }
+//   fareed() {
+//     console.log("I`am Frontend Developer");
+//   }
+// }
+
+// let myObj = new engineer();
+// // let myObj2 = new engineer();//ending inheriting
+
+// class person {
+//   constructor(name) {
+//     // console.log("iam a parent start");// second parent chala //
+//     this.specialities = " i am a special method";
+//     this.name = name;
+//     // console.log("iam a parent exit");// third parent chala//
+//   }
+//   eat() {
+//     console.log("I`am Eating");
+//   }
+//   sleep() {
+//     console.log("I`am Sleeping");
+//   }
+// }
+
+// class engineer extends person {
+//   constructor(name) {
+//     // console.log("iam a child start");// first child yai chala/
+//     super(name); // to invoke parent class constructor
+//     this.childSpecialities = "iam a childSpecialities";
+//     // console.log("iam a child exit");// last yai chala//
+//   }
+
+//   work() {
+//     console.log("I`am Software Engineer");
+//     super.eat();
+//   }
+//   fareed() {
+//     console.log("I`am Frontend Developer");
+//   }
+// }
+
+// let myObj = new engineer("FareedGul");
+// // let myObj2 = new engineer();
+
+// let s Practices Questions  ///
+
+// let data = "secret information";
+// class user {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   viewData() {
+//     console.log(data, "data---");
+//   }
+// }
+
+// class admin extends user {
+//   constructor(name, email) {
+//     super(name, email);
+//   }
+//   editData() {
+//     data = "some new value";
+//   }
+// }
+
+// let student1 = new user("fareed", "fareedgul735@gamil.com");
+// let student2 = new user("saeed", "saeedgul785@gamil.com");
+// let teacher = new user("anzla", "anzla7895@gamil.com");
+
+// let adminExtra = new admin("admin", "admin@gmail.com");
+
+// let a = 4;
+// let b = 8;
+// console.log(a);
+// try {
+//   console.log(a + c);
+// } catch (err) {
+//   console.log(err);
+// }
+// let f = 65;
+// let y = 76;
+
+// console.log(f, y);

@@ -4377,3 +4377,76 @@
 // let y = 76;
 
 // console.log(f, y);
+
+// let obj1 = {
+//   name: "fareed",
+// };
+
+// let obj2 = {
+//   age: 19,
+// };
+
+// let mergeing = Object.assign({}, obj1, obj2);
+// console.log(mergeing);
+
+// restParameters //
+
+// function myRest(fname, lname, ...hobbies) {
+//   let bioData = fname + lname + hobbies;
+//   return bioData;
+// }
+// console.log(
+//   myRest(
+//     "my first name is fareed ",
+//     " my last name is gul ",
+//     "my favrt hobbies ",
+//     "boxing ",
+//     "cricket ",
+//     "fitness ",
+//     "hockeyBall "
+//   )
+// );
+
+// rest Operators //
+
+// function myRestOperators(fname, lname, ...hobbies) {
+//   document.write(`my fullname is ${fname} ${lname} <br>`);
+//   document.write(`my favrt hobbies is ${hobbies.join(", ")}`);
+// }
+// myRestOperators("fareed", "gul", "cricket", "boxing", "hockeyBall");
+
+// spread operators //
+
+// let array = [1, 2, 3, 4, 5];
+
+// let moreAdded = [...array, 10, 11, 12, 13, 14, 15];
+
+// console.log(moreAdded);
+
+// let myObj = { fname: "fareed", lname: "gul" };
+
+// let updateObj = { ...myObj, city: "karachi", village: "khoat" };
+// console.log(updateObj);
+
+// console.log(location.href); //yai mere location ka link degha //
+// console.log(location.hostname); // yai jho host ki hoge uss ka naam dega //
+// console.log(location.pathname); //yai mre location ka path degah //
+// console.log(window.location.hash); /// URL ka hash part return karta hai //
+// let myHash = window.location.hash;
+// console.log(myHash);
+
+// let myLink = (window.location.href = "https://www.google.com");
+// console.log(myLink);//hum set bhi karsakte hai loi bhi href
+
+// let currentSite = window.location.hostname;
+// let insta = "http://www.instagram.com";
+// let myWindw = (window.location.href = insta);
+
+// console.log(location.assign("https://www.google.com"));//Nayi website par le jata hai//
+// console.log(location.href);
+// console.log(location.replace("https://www.facebook.com"));	Nayi website par le jata hai (pichla page yaad nahi rehta)
+// console.log(location.reload(false))Page ko cache se refresh karta hai;
+// console.log(location.reload(true));	//Page ko server se naya refresh karta hai
+
+
+// browser getting the setting url completed//

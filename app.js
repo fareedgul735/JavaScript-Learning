@@ -4448,5 +4448,69 @@
 // console.log(location.reload(false))Page ko cache se refresh karta hai;
 // console.log(location.reload(true));	//Page ko server se naya refresh karta hai
 
-
 // browser getting the setting url completed//
+
+// console.log(location.href);
+
+// history.back();///Agar aap Page B par hain aur Page A se aaye thay, to history.back(); aapko wapis Page A par le jayega.
+
+// history.forward(); //Agar aap Page B par thay, history.back(); use karke Page A gaye, to history.forward(); wapis Page B par le ayega.
+
+// document.referrer//Agar aap Google.com se kisi website par aaye hain, to document.referrer; Google ka URL return karega.
+
+// history.go(2); //Agar aap Page A → Page B → Page C → Page D par hain, aur aap Page B par hain, to history.go(2); aapko Page D par le jayega.
+
+// window.open()// Naya tab ya pop-up kholta hai//
+// window.close()// 	Sirf wohi window band kar sakta hai jo window.open(); se open hui ho//
+// document.write("hello,world")//	Yeh purane content ko hata deta hai, isliye caution ke sath use karein//
+
+// let myWindow = window.open("https://www.facebook.com");
+// window.close(myWindow);
+
+// var w = window.open("", "", "width=420,height=380,left=200,top=100");
+
+// var windowSpecs = "'faq.html', 'faq', 'width=420,height=380,left=200,top=100'";
+// var faqPage = window.open(windowSpecs);
+
+// function checkForPopBlocker() {
+//     let testPop = window.open("", "", "width=100,height=100");
+//     if (!testPop || testPop.closed || typeof testPop.closed === "undefined") {
+//       alert("Popup blocker detected! Please disable it.");
+//     } else {
+//       testPop.close();
+//       alert("Popups are allowed!");
+//     }
+//   }
+
+//   // Call function on user action
+//   document.querySelector("#checkPopup").addEventListener("click", checkForPopBlocker);
+
+// function checkForPopBlocker() {
+//   let testPop = window.open("", "", "width=100,height=100");
+//   if (testPop === null || typeof (testPop === "undefined")) {
+//     alert("Please disable your popup blocker.");
+//   }
+//   testPop.close();
+// }
+
+function formAction() {
+  if (document.getElementById("input").value.length === 0) {
+    alert("Please Enter A Some Thing!");
+    document.getElementById("input").focus();
+    return false;
+  } else {
+    alert("Thankyou!");
+  }
+}
+
+function myFunc1() {
+  let focus = document.getElementById("input");
+  focus.style.backgroundColor = "black";
+  focus.style.color = "white";
+}
+
+function myFunc2() {
+  let focus = document.getElementById("input");
+  focus.style.backgroundColor = "white";
+  focus.style.color = "black";
+}

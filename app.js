@@ -4493,24 +4493,74 @@
 //   testPop.close();
 // }
 
-function formAction() {
-  if (document.getElementById("input").value.length === 0) {
-    alert("Please Enter A Some Thing!");
-    document.getElementById("input").focus();
-    return false;
-  } else {
-    alert("Thankyou!");
+// function formAction() {
+//   if (document.getElementById("input").value.length === 0) {
+//     alert("Please Enter A Some Thing!");
+//     document.getElementById("input").focus();
+//     return false;
+//   } else {
+//     alert("Thankyou!");
+//   }
+// }
+
+// function myFunc1() {
+//   let focus = document.getElementById("input");
+//   focus.style.backgroundColor = "black";
+//   focus.style.color = "white";
+// }
+
+// function myFunc2() {
+//   let focus = document.getElementById("input");
+//   focus.style.backgroundColor = "white";
+//   focus.style.color = "black";
+// }
+
+// function checkForSelection() {
+//   if (document.getElementById("states").selectedIndex === 0) {
+//     alert("please chose a option");
+//     return false;
+//   } else {
+//     alert("Thnkyou");
+//   }
+// }
+
+function checkForSelection() {
+  let myCheck = document.getElementById("states");
+  if (myCheck.selectedIndex === 0) {
+    alert("Please  choose option");
+    return true;
   }
+  alert("Please choose a button");
+  return false;
 }
 
-function myFunc1() {
-  let focus = document.getElementById("input");
-  focus.style.backgroundColor = "black";
-  focus.style.color = "white";
-}
+// function validateRadios() {
+//   let myRadio = document.getElementsByName("rl"); // Get radio buttons
+//   let checked = false;
 
-function myFunc2() {
-  let focus = document.getElementById("input");
-  focus.style.backgroundColor = "white";
-  focus.style.color = "black";
-}
+//   for (let i = 0; i < myRadio.length; i++) {
+//     if (myRadio[i].checked) {
+//       checked = true;
+//       break; // Ek checked mil gaya, loop stop kar do
+//     }
+//   }
+
+//   if (checked) {
+//     alert("Thank you!");
+//     return true; // Form submit hone dega
+//   } else {
+//     alert("Please choose a button!");
+//     return false; // Form submit nahi hoga
+//   }
+// }
+
+// function validateRadios() {
+//   var radios = document.getElementsByName("r1");
+//   for (var i = 0; i < radios.length; i++) {
+//     if (radios[i].checked) {
+//       return true;
+//     }
+//   }
+//   alert("Please check one.");
+//   return false;
+// }

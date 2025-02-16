@@ -4386,6 +4386,12 @@
 //   age: 19,
 // };
 
+// Objects ka Use Kahan Hota Hai?
+// Real-world Objects ko Represent Karne ke Liye – Jaise Car, Employee, Student, Mobile waghera.
+// Code ko Organize aur Reuse Karne ke Liye – Ek hi class ka multiple objects bana sakte hain.
+// Badi Applications Develop Karne ke Liye – Jaise Banking Apps, Games, Web Apps mein objects use hote hain.
+// Agar interviewer sirf basic puch raha hai, to aap sirf itna bata dein ke object kisi bhi cheez ka ek real-world model hota hai jo properties aur actions rakhta hai.
+
 // let mergeing = Object.assign({}, obj1, obj2);
 // console.log(mergeing);
 
@@ -4524,15 +4530,15 @@
 //   }
 // }
 
-function checkForSelection() {
-  let myCheck = document.getElementById("states");
-  if (myCheck.selectedIndex === 0) {
-    alert("Please  choose option");
-    return true;
-  }
-  alert("Please choose a button");
-  return false;
-}
+// function checkForSelection() {
+//   let myCheck = document.getElementById("states");
+//   if (myCheck.selectedIndex === 0) {
+//     alert("Please  choose option");
+//     return true;
+//   }
+//   alert("Please choose a button");
+//   return false;
+// }
 
 // function validateRadios() {
 //   let myRadio = document.getElementsByName("rl"); // Get radio buttons
@@ -4564,3 +4570,150 @@ function checkForSelection() {
 //   alert("Please check one.");
 //   return false;
 // }
+
+// function myForm() {
+//   let zipInput = document.getElementById("input").value;
+//   let checking = zipInput.length;
+//   if (checking < 5) {
+//     alert("Please Enter 5-digit-code!");
+//     return false;
+//   }
+//   for (let i = 0; i <= 4; i++) {
+//     let charing = parseInt(checking[i]);
+//     if (isNaN(charing[i])) {
+//       alert("Please Enter Number!");
+//       break;
+//     } else {
+//       alert("ThankhYou For Submitting!");
+//     }
+//   }
+// }
+
+// function validateEmail() {
+//     let addressIsLegal = true; // Pehle assume kar rahe hain ke email sahi hai
+//     const validEmail = document.getElementById("address").value;
+
+//     // 1️⃣ Check: Agar email me space hai toh invalid kar do
+//     if (validEmail.indexOf(" ") !== -1) {
+//       addressIsLegal = false;
+//     }
+
+//     // 2️⃣ Check: '@' ki position sahi jagah pe hai ya nahi
+//     if (
+//       validEmail.indexOf("@") < 1 || // '@' sabse pehle character pe nahi ho sakta
+//       validEmail.indexOf("@") > validEmail.length - 5 // '@' last ke 5 characters ke andar nahi hona chahiye
+//     ) {
+//       addressIsLegal = false;
+//     }
+
+//     // 3️⃣ Check: '.' aur '@' ke positions sahi hain ya nahi
+//     if (
+//       validEmail.indexOf(".") - validEmail.indexOf("@") < 2 || // '.' aur '@' ke beech kam se kam 2 characters hone chahiye
+//       validEmail.indexOf(".") > validEmail.length - 3 // '.' last ke 2 characters me nahi hona chahiye (domain extension kam se kam 3 characters ka hona zaroori hai)
+//     ) {
+//       addressIsLegal = false;
+//     }
+
+//     // 4️⃣ Agar koi condition fail ho gayi toh error dikhayenge
+//     if (addressIsLegal === false) {
+//       alert("Please correct email address");
+//       return false;
+//     }
+
+//     // 5️⃣ Agar sab kuch sahi hai toh form submit kar denge
+//     alert("Submitting"); // User ko success message dikhayenge
+//     return true;
+//   }
+
+// regex pattern email validation//
+
+// function validateEmail() {
+//     const validEmail = document.getElementById("address").value;
+
+//     // ✅ Email Validation Pattern (Regex)
+//     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+//     // ✅ Check if email matches the pattern
+//     if (!!emailPattern.test(validEmail)) {
+//       alert("Please enter a valid email address");
+//       return false;
+//     }
+
+//     alert("Submitting");
+//     return true;
+//   }
+
+// try & catch Try-catch ek programming construct hai jo errors (exceptions) ko handle karne ke
+//  liye use hota hai. try block mein code likha jata hai, aur agar koi error aaye toh catch block usse handle karta hai.
+
+// function myFunc() {
+//   try {
+//     let a = 10;
+//     let b = 20;
+//     let y = 65;
+//     let z = "helloWorld";
+//     console.log(y + z);
+//     let obj = {
+//       name: "fareed",
+//       age: 19,
+//       religion: "muslim",
+//       eduction: "Entermidiate",
+//       experience: "frontendDeveloper",
+//     };
+//     console.log(obj);
+//     console.log(a + c);
+//   } catch (err) {
+//     document.write(err);
+//   }
+//   let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   console.log(array);
+// }
+
+// myFunc();
+// function myPassword() {
+//   try {
+//     let myInput = document.getElementById("password").value;
+
+//     // Check password length
+//     if (myInput.length < 9) {
+//       throw "Password must be at least 9 characters long.";
+//     }
+
+//     // Check for spaces
+//     if (myInput.indexOf(" ") !== -1) {
+//       throw "Spaces are not allowed in the password.";
+//     }
+
+//     // Check if password contains at least one number
+//     let numberSomewhere = false;
+//     for (let i = 0; i < myInput.length; i++) {
+//       if (!isNaN(myInput[i]) && myInput[i] !== " ") {
+//         numberSomewhere = true;
+//         break;
+//       }
+//     }
+
+//     if (!numberSomewhere) {
+//       throw "Password must include at least 1 number.";//JavaScript me throw ka use errors ya exceptions ko manually generate karne ke liye hota hai.
+//     } else {
+//       alert("ThankYou For Submit");
+//     }
+//   } catch (err) {
+//     alert(err);
+//   }
+// }
+
+// function helloworld() {
+//   alert("hello,iam fareed");
+// }
+
+// let btn = document.getElementById("btn");
+// btn.onclick = helloworld;//this is eventhandler
+
+// function myEvent(){
+//     alert('hello,iam fareed')
+// } //yai html kay thro hum nay kiya hai
+
+// document.getElementById("btn").addEventListener("click", () => {
+//   alert("hello,iam fareed");
+// });///or aik or yai tareeqa hai 
